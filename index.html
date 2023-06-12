@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+    <!--creating a navbar-->
+    <header class="header">
+        <a href="#" class="Logo">MY PORTFOLIO</a>
+        <i class='bx bx-menu-alt-left' id="menu"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#service">SERVICES</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
+
+    <!--creating a home section-->
+    <section class="home" id="home">
+        <div class="home-detail">
+            <h3>Hey, it's me</h3>
+            <h1>Atharva Jagtap</h1>
+            <h3>And I'm a <span class="textline">Software Engineer</span></h3>
+            <p>Welcome to my portfolio website! I'm delighted to have you here. Take a moment to explore and get to know
+                me better. As a passionate software engineer, I strive to create innovative solutions that make a
+                positive impact.</p>
+            <p>Within these pages, you'll find a collection of my projects, showcasing my dedication and expertise in
+                the field. Each project represents a unique challenge I've taken on, and I've poured my heart and soul
+                into delivering exceptional results.</p>
+            <p>I invite you to dive into my portfolio, where you can discover my journey, experiences, and
+                accomplishments. If you have any questions or would like to discuss potential collaborations, please
+                don't hesitate to reach out. Let's connect and explore how we can work together to bring your ideas to
+                life.</p>
+            <p>Once again, thank you for visiting, and I hope you enjoy your time here!</p>
+
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/atharva-jagtap-b5794227a/"><i class='bx bxl-linkedin'></i></a>
+                <a
+                    href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsTPLmLGVcJbTLlnxCfDpQZDdMWLRtfTHnNnlLhxclgvcjHfKzLCGZmdnPPtLHMNtTxhMZhl"><i
+                        class='bx bxl-gmail'></i></a>
+                <a href="https://github.com/atharvajagtap29"><i class='bx bxl-github'></i></i></a>
+            </div>
+            <a href="Docs/Atharva's Resume (3).pdf" download>
+                <button class="btn">Download CV</button>
+            </a>
+            <div class="home-image">
+                <img src="Img/myimg.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!--creating a about section-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="Img/logo.gif" alt="">
+        </div>
+        <div class="about-section">
+            <h2 class="allheading">About <span>Me</span></h2>
+            <h3>Software Engineer</h3>
+            <p>Hello, my name is Atharva Jagtap, and I'm an enthusiastic and dedicated developer. With nearly five years
+                of experience in computer science, I have honed my skills and expertise in various domains. Backend
+                development has always been my primary focus, and I find immense joy in building robust and efficient
+                server-side solutions.</p>
+
+            <p>Throughout my journey, I have successfully completed 10 projects that have helped me gain valuable
+                hands-on experience. These projects have allowed me to enhance my skills in Java, SQL, AWS, MS Office,
+                and version control systems like Git. I am proficient in Java programming and have utilized it
+                extensively to develop scalable and high-performance applications.</p>
+
+            <p>In addition to backend development, I have a keen interest in cloud computing and cloud architecture
+                setups. I enjoy exploring and implementing cloud solutions, leveraging the power of platforms like AWS
+                to deploy and manage applications in a flexible and scalable manner.</p>
+
+            <p>Feel free to explore my portfolio, where you can find detailed information about my projects and the
+                technologies I have worked with. I am always open to discussing collaboration opportunities, so please
+                don't hesitate to get in touch. I look forward to the possibility of working together to create
+                innovative and impactful solutions.
+            </p>
+        </div>
+    </section>
+
+    <!--creating a service section-->
+    <section class="service" id="service">
+        <div class="service-img">
+            <img src="Img/services2.gif" alt="">
+            <h2 class="allheading">My <span>Expertise</span></h2>
+        </div>
+        <div class="service-section">
+            <!-- Backend Development -->
+            <div class="service-box">
+                <i class='bx bxl-java'></i>
+                <h3>Backend Development</h3>
+                <p>I have a strong interest in backend development, particularly in Java. I am enthusiastic about
+                    utilizing the Java programming language and its frameworks to build scalable and efficient
+                    server-side solutions.</p>
+            </div>
+            <!-- Cloud solutions -->
+            <div class="service-box">
+                <i class='bx bxl-aws'></i>
+                <h3>Cloud Solutions</h3>
+                <p>I am deeply passionate about cloud architecture and have a keen interest in designing and
+                    implementing scalable and resilient solutions. I am proud to have achieved my Level 1 AWS
+                    certification, demonstrating my commitment to mastering cloud technologies.</p>
+            </div>
+            <!-- DB -->
+            <div class="service-box">
+                <i class='bx bxl-postgresql'></i>
+                <h3>Database Management</h3>
+                <p>I also have a keen interest in database management techniques and have extensively utilized SQL in my
+                    projects. I am fascinated by the design, optimization, and administration of databases, and I strive
+                    to leverage my knowledge to develop efficient and reliable data storage solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--creating a project section-->
+    <section class="portfolio" id="portfolio">
+        <h2 class="allheading">Recent <span>Projects</span></h2>
+        <div class="portfolio-section">
+            <div class="portfolio-box">
+                <img src="Img/project2.jpg" alt="">
+                <div class="portfolio-head">
+                    <h4>Online Job Portal System</h4>
+                    <p>An online job portal is a platform that connects job seekers with employers, providing a
+                        convenient and efficient way for both parties to find suitable employment opportunities.</p>
+                    <a href="https://github.com/atharvajagtap29/Job-Portal"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="Img/project2.jpg" alt="">
+                <div class="portfolio-head">
+                    <h4>Electricity Billing System</h4>
+                    <p>The Electricity Binning System is a project that aims to efficiently manage and monitor the
+                        consumption of electricity in different areas or sections of a building or facility.</p>
+                    <a href="https://github.com/atharvajagtap29/Energy-Billing-System"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="Img/project2.jpg" alt="">
+                <div class="portfolio-head">
+                    <h4>Personal Portfolio Website</h4>
+                    <p>The personal portfolio website is where i have tried to to put my css skills to test as much as i
+                        could and i have uploaded the same website on my domain</p>
+                    <a href=""><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--creating a contact section-->
+    <section class="contact" id="contact">
+        <h2 class="allheading">Reach <span>Me</span></h2>
+        <div class="contact-details">
+            <div class="contact-info">
+                <span>
+                    <h3>Email</h3>
+                </span>
+                <p>jagtapatharva408@gmail.com</p>
+            </div>
+            <div class="contact-info">
+                <span>
+                    <h3>Phone</h3>
+                </span>
+                <p>+91-7709525814</p>
+            </div>
+            <div class="contact-info">
+                <span>
+                    <h3>Address</h3>
+                </span>
+                <p>Dhankawadi, Pune, Maharashtra</p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
