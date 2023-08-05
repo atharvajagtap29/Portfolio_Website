@@ -366,12 +366,69 @@ span{
     transition: transform 0.5s ease
 }
 
+
 /* Responsive Styles */
-@media(max-width:1200px){
-    html{
+@media only screen and (max-width: 1200px) {
+    html {
         font-size: 55%;
     }
+
+    .header {
+        padding: 1.5rem 5%;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0;
+        transition: all 0.3s ease-in;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+
+    #menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .home-detail p {
+        margin-right: 0;
+    }
+
+    .home .home-image img {
+        height: 30%;
+        width: 60%;
+        bottom: 10%;
+    }
+
+    .about-img img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .service-section .service-box {
+        flex: 0 0 100%;
+    }
+
+    .portfolio-section {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
 }
+
 
 
 
