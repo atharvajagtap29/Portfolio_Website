@@ -4,7 +4,7 @@ name: Push-to-EC2
 on:
   push:
     branches:
-      -master
+      - main
 
 jobs:
   deploy:
@@ -12,28 +12,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout the files and folders
-      uses: actions/checkout@v2
+      - name: Checkout the files
+        uses: actions/checkout@v2
 
-    - name: Deploy to Portfolio-Web-1
-      uses: easingthemes/ssh-deploy@master
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.PORTFOLIOEC2_SSHKEY }}
-        REMOTE_HOST: ${{ secrets.HOST_DNS }}
-        REMOTE_USER: ${{ secrets.USERNAME }}
-        TARGET: ${{ secrets.TARGET_DIRECTORY }} 
+      - name: Deploy to Server 1
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PORTFOLIOEC2_SSHKEY }}
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          TARGET: ${{ secrets.TARGET_DIRECTORY }}
 
-    - name: Executing remote SSH commands using ssh key
-      uses: ageek/ssh-action@master
-      with:
-        host: ${{ secrets.HOST_DNS }}
-        username: ${{secrets.USERNAME }}
-        key: ${{secrets.PORTFOLIOEC2_SSHKEY }}
-        script: |
-          sudo apt-get -y update
-          sudo apt-get install -y apache2
-          sudo systemctl start apache2
-          sudo systemctl enable apache2
-          cd home
-          sudo mv * /var/www/html
-          
+      - name: Executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DNS }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.PORTFOLIOEC2_SSHKEY }}
+          script: |
+            sudo apt-get -y update
+            sudo apt-get install -y apache2
+            sudo systemctl start apache2
+            sudo systemctl enable apache2
+            cd home
+            sudo mv * /var/www/html
