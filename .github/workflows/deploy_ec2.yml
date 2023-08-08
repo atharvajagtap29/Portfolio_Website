@@ -4,7 +4,7 @@ name: Push-to-EC2
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
@@ -15,16 +15,16 @@ jobs:
       - name: Checkout the files
         uses: actions/checkout@v2
 
-      - name: Deploy to Server 1
-        uses: easingthemes/ssh-deploy@main
+      - name: Deploy to Portfolio-Web-1
+        uses: easingthemes/ssh-deploy@master
         env:
           SSH_PRIVATE_KEY: ${{ secrets.PORTFOLIOEC2_SSHKEY }}
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIRECTORY }}
 
-      - name: Executing remote ssh commands using ssh key
-        uses: appleboy/ssh-action@master
+      - name: Executing SSH commands on EC2
+        uses: ageek/ssh-action@master
         with:
           host: ${{ secrets.HOST_DNS }}
           username: ${{ secrets.USERNAME }}
