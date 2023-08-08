@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy to Portfolio-Web-1
-        uses: easingthemes/ssh-deploy@master
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.PORTFOLIOEC2_SSHKEY }}
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
