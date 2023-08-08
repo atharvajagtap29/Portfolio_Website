@@ -18,17 +18,17 @@ jobs:
       - name: Deploy to Portfolio-Web-1
         uses: easingthemes/ssh-deploy@main
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.PORTFOLIOEC2_SSHKEY }}
-          REMOTE_HOST: ${{ secrets.HOST_DNS }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          TARGET: ${{ secrets.TARGET_DIRECTORY }}
+          SSH_PRIVATE_KEY: ${{secrets.PORTFOLIOEC2_SSHKEY}}
+          REMOTE_HOST: ${{secrets.HOST_DNS}}
+          REMOTE_USER: ${{secrets.USERNAME}}
+          TARGET: ${{secrets.TARGET_DIRECTORY}}
 
       - name: Executing SSH commands on EC2
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST_DNS }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.PORTFOLIOEC2_SSHKEY }}
+          host: ${{secrets.HOST_DNS}}
+          username: ${{secrets.USERNAME}}
+          key: ${{secrets.PORTFOLIOEC2_SSHKEY}}
           script: |
             sudo apt-get -y update
             sudo apt-get install -y apache2
