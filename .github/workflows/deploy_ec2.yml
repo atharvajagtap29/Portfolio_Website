@@ -24,5 +24,5 @@ jobs:
       run: |
         # Use SSH to connect to your EC2 instance and run deployment scripts
         # Example commands:
-        ssh -i "MyKey-1.pem" ubuntu@ec2-65-0-91-103.ap-south-1.compute.amazonaws.com
+        ssh -i "C:\Users\Atharva JAgtap\OneDrive\Desktop\AWS\SSH\MyKey-1.pem" ubuntu@65.0.91.103
 
