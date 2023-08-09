@@ -31,4 +31,5 @@ jobs:
          pwd
          cd /var/www/html
          pwd
+         sudo vim demo.txt
 
