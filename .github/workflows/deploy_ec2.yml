@@ -1,38 +1,23 @@
-name: Push-to-EC2
+name: Deploy to EC2
 
-# Trigger deployment only on push to the main branch
 on:
   push:
     branches:
       - master
-      
+
 jobs:
   deploy:
-    name: Deploy to EC2 on master branch push
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the files
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - name: Deploy to Portfolio-Web-1
-        uses: easingthemes/ssh-deploy@master
-        env:
-          SSH_PRIVATE_KEY: ${{secrets.PORTFOLIOEC2_SSHKEY}}
-          REMOTE_HOST: ${{secrets.HOST_DNS}}
-          REMOTE_USER: ${{secrets.USERNAME}}
-          TARGET: ${{secrets.TARGET_DIRECTORY}}
-
-      - name: Executing SSH commands on EC2
-        uses: appleboy/ssh-action@master
+      - name: Upload to EC2 instance
+        uses: appleboy/scp-action@master
         with:
           host: ${{secrets.HOST_DNS}}
           username: ${{secrets.USERNAME}}
-          key: ${{secrets.PORTFOLIOEC2_SSHKEY}}
-          script: |
-            sudo apt-get update -y
-            sudo apt-get install apache2 -y
-            sudo systemctl start apache2
-            sudo systemctl enable apache2
-            cd home
-            sudo mv * /var/www/html
+          key: ${{ secrets.PORTFOLIOEC2_SSHKEY }}
+          source: <local-path-to-your-website>
+          target: ${{secrets.TARGET_DIRECTORY}}
