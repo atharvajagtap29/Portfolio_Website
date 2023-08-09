@@ -29,6 +29,6 @@ jobs:
         port: 22
         script: |
          pwd
-         #cd /home/ubuntu/.ssh
-         #ssh -i "authorized_keys" ubuntu@65.0.91.103 -yes
+         cd /home/ubuntu/.ssh
+         ssh -i "authorized_keys" ubuntu@65.0.91.103 -yes
 
