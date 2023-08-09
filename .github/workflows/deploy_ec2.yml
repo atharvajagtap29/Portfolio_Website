@@ -19,5 +19,5 @@ jobs:
           host: ${{ secrets.HOST_DNS }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PORTFOLIOEC2_SSHKEY }}
-          source: "C:/Users/Atharva Jagtap/OneDrive/Desktop/MyWebsite"
+          source: "/github/workspace"
           target: ${{ secrets.TARGET_DIRECTORY }}
