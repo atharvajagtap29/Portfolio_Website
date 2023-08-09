@@ -29,4 +29,6 @@ jobs:
         port: 22
         script: |
          pwd
+         cd /var/www/html
+         pwd
 
