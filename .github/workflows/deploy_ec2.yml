@@ -25,6 +25,7 @@ jobs:
       with:
         host: 3.7.33.228
         username: ubuntu
+        password: ${{ secrets.SSH_PASSWORD }}
         port: 22
         script: |
          pwd
