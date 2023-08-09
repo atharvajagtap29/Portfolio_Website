@@ -24,6 +24,7 @@ jobs:
       run: |
         # Use SSH to connect to your EC2 instance and run deployment scripts
         # Example commands:
-        cd /home/ubuntu/.ssh
-        ssh -i "authorized_keys" ubuntu@65.0.91.103 -yes
+        pwd
+        #cd /home/ubuntu/.ssh
+        #ssh -i "authorized_keys" ubuntu@65.0.91.103 -yes
 
