@@ -21,10 +21,13 @@ jobs:
         aws-region: ap-south-1
 
     - name: Deploy to EC2
-      run: |
-        # Use SSH to connect to your EC2 instance and run deployment scripts
-        # Example commands:
-        pwd
-        #cd /home/ubuntu/.ssh
-        #ssh -i "authorized_keys" ubuntu@65.0.91.103 -yes
+      uses: appleboy/ssh-action@v0.1.4
+      with:
+        host: 3.7.33.228
+        username: ubuntu
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+         pwd
+         #cd /home/ubuntu/.ssh
+         #ssh -i "authorized_keys" ubuntu@65.0.91.103 -yes
 
