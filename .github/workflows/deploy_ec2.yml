@@ -26,6 +26,7 @@ jobs:
         host: 3.7.33.228
         username: ubuntu
         key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22
         script: |
          pwd
          #cd /home/ubuntu/.ssh
