@@ -412,7 +412,7 @@ span{
         height: 30%;
         width: 60%;
         bottom: 10%;
-    }
+    } 
 
     .about-img img {
         width: 100px;
@@ -427,7 +427,19 @@ span{
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
     }
-}
+
+    /* Media query for screens with a maximum width of 767px (typical for mobile devices) */
+    @media (max-width: 767px) {
+        .home .home-image img {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            bottom: auto;
+            width: 40%;
+            height: auto;
+        }
+    }
+} 
 
 
 
