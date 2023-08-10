@@ -31,4 +31,5 @@ jobs:
          pwd
          cd /var/www/html/Portfolio_Website
          pwd
-         git pull origin master
+         git pull --rebase origin master
+
