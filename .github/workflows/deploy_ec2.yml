@@ -31,4 +31,4 @@ jobs:
          pwd
          cd /var/www/html/Portfolio_Website
          pwd
-         git pull --ff-only
+         git config --global pull.ff only
