@@ -72,6 +72,8 @@ section{
     display: none;
 }
 
+/* HOME SECTION STARTS */
+
 .home{
     text-align: left;
     display: flex;
@@ -117,7 +119,6 @@ span{
     transition: .5s ease;
 }
 
-/* javascript */
 .social-media a:hover, .social-media a.active{
     background-color: darkorange;
     color: black;
@@ -165,6 +166,16 @@ span{
     transition: bottom 0.5s, left 1s;
 }
 
+
+
+
+
+
+
+
+
+/* ABOUT SECTION STARTS */
+
 .about{
     background-color: #111;
 }
@@ -202,9 +213,110 @@ span{
     margin: 2rem 0 3rem;
 }
 
+.about .tab-titles {
+    display: flex;
+    margin: 20px 350px 10px;
+}
+
+.about .tab-links {
+    font-size: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    margin-right: 80px; /* Add margin-right to create space between tab-links */
+}
+
+.about .tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: darkorange;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.about .tab-links.active-link::after{
+    width: 50%;
+}
+
+#edu {
+    margin-left: 120px;
+}
+#internship {
+    margin-left: 280px;
+}
+#intr {
+    margin-left: 445px;
+}
+  
+
+.about .tab-contents ul li{
+    list-style: none;
+    margin: 10px 350px 20px;
+}
+
+.about .tab-contents span{
+   font-size: 20px;
+}
+
+.about .tab-contents{
+    display: none;
+}
+
+.about .tab-contents.active-tab{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+/* CERTIFICATION SECTION STARTS */
+/* Keep the existing styling for the "giphy.gif" image */
+.certificate{
+    min-height: 800px;
+}
+
+.certification-img {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-end; /* Align elements at the bottom */
+    align-items: center;
+    margin-top: -50px;
+}
+
+.certification-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* service section */
 .service {
+    min-height: 1000px;
+    background-color: #111;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -267,15 +379,13 @@ span{
 
 
 /* Project section */
-.portfolio{
-    background-color: #111;
-}
 
 .portfolio h2{
     margin-bottom: 3.5rem;
 }
 
 .portfolio-box{
+    margin-top: 5rem;
     position: relative;
     border-radius: 2rem;
     box-shadow: 0 0 1rem black;
@@ -346,7 +456,17 @@ span{
     color: black;
 }
 
+
+
+
+
+
 /* contact me */
+.contact{
+    min-height: 600px;
+    background-color: #111;
+}
+
 .contact h2{
     margin-bottom: 5rem;
 }
