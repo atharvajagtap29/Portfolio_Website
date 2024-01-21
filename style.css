@@ -487,7 +487,7 @@ span{
 }
 
 
-/* Responsive Styles */
+/* Responsive Styles for screens with a maximum width of 1200px */
 @media only screen and (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -547,19 +547,69 @@ span{
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
     }
-
-    /* Media query for screens with a maximum width of 767px (typical for mobile devices) */
-    @media (max-width: 767px) {
-        .home .home-image img {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            bottom: auto;
-            width: 40%;
-            height: auto;
-        }
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Responsive Styles */
+@media only screen and (max-width: 1200px) {
+    .about .tab-titles {
+        margin: 20px 10px 10px; /* Adjust margins for smaller screens */
     }
-} 
+
+    .about .tab-links {
+        margin-right: 20px; /* Adjust margin-right for space between tab-links */
+    }
+
+    .about .tab-contents ul li {
+        margin: 10px 10px 20px; /* Adjust margins for smaller screens */
+    }
+
+    #edu {
+        margin-left: 10px; /* Adjust margin-left for smaller screens */
+    }
+
+    #internship {
+        margin-left: 10px; /* Adjust margin-left for smaller screens */
+    }
+
+    #intr {
+        margin-left: 10px; /* Adjust margin-left for smaller screens */
+    }
+}
+
+/* Media query for screens with a maximum width of 767px (typical for mobile devices) */
+@media (max-width: 767px) {
+    .about .tab-titles {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0 10px; /* Adjust margins for smaller screens */
+    }
+
+    .about .tab-links {
+        margin: 10px 0;
+    }
+
+    .about .tab-contents ul li {
+        margin: 10px 0 20px; /* Adjust margins for smaller screens */
+    }
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 1200px) {
+    .home .home-image img {
+        height: 35%;  
+        width: 30%;   /* Adjust the width to your preference */
+        max-width: 100%;  
+        position: absolute;
+        top: 2.5rem;  /* Move it a bit more above */
+        right: auto;   /* Shift it more to the left */
+        bottom: auto;
+        border-radius: 10px;  /* Adjust the border-radius for a smaller image */
+        
+    }
+}
+
+
+
 
 
 
